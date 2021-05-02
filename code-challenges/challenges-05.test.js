@@ -144,7 +144,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 const reversedString = (str) => {
   // Solution code here...
   const strArr=str.split('');
-  const newStr =strArr.reduce((a,b)=>b+a,'');
+  const newStr =strArr.reduce((acc,value)=>value+acc,'');
   return newStr;
 };
 
