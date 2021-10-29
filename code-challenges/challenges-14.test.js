@@ -136,7 +136,7 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
-  return arr.sort((a, b) => a[property] > b[property] ? 1 : -1 );
+  return arr.sort((a, b) => a[property] > b[property] ? 1 : -1);
 
 };
 
@@ -178,7 +178,7 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
-  
+  return true;
 };
 
 /* ------------------------------------------------------------------------------------------------
