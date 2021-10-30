@@ -178,7 +178,23 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
-  return true;
+  let all = {
+    r1: board[0][0] + board[0][1] + board[0][2],
+    r2: board[1][0] + board[1][1] + board[1][2],
+    r3: board[2][0] + board[2][1] + board[2][2],
+    c1: board[0][0] + board[1][0] + board[2][0],
+    c2: board[0][1] + board[1][1] + board[2][1],
+    c3: board[0][2] + board[1][2] + board[2][2],
+    d1: board[0][0] + board[1][1] + board[2][2],
+    d2: board[0][2] + board[1][1] + board[2][0],
+  };
+  let allArr = [all.r1, all.r2, all.r3, all.c1, all.c2, all.c3, all.d1, all.d2];
+  if (allArr.includes('OOO') || allArr.includes('XXX')) {
+    return true;
+  }
+  else
+    return false;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
