@@ -19,13 +19,13 @@ describe('test the link list', () => {
     const list = new LinkedList();
     list.insert('A');
     list.insert('B');
-    expect(list.head.value).toEqual('A');
+    expect(list.head.value).toEqual('B');
   });
   it('add multiple nodes to the end of a linked list', () => {
     const list = new LinkedList();
-    list.insert('A');
-    list.insert('B');
-    list.insert('C');
+    list.addNode('A');
+    list.addNode('B');
+    list.addNode('C');
     expect(list.head.value).toEqual('A');
     expect(list.head.next.value).toEqual('B');
     expect(list.head.next.next.value).toEqual('C');
@@ -33,9 +33,9 @@ describe('test the link list', () => {
   });
   it('Will return true when finding a value within the linked list that exists', () => {
     const list = new LinkedList();
-    list.insert('A');
-    list.insert('B');
-    list.insert('C');
+    list.addNode('A');
+    list.addNode('B');
+    list.addNode('C');
     expect(list.includes('C')).toBe(true);
   });
   it('Will return false when searching for a value in the linked list that does not exist', () => {
@@ -48,8 +48,8 @@ describe('test the link list', () => {
   it('Can properly return a collection of all the values that exist in the linked list', () => {
     const list = new LinkedList();
     list.insert('A');
-    list.insert('B');
-    list.insert('C');
+    list.addNode('B');
+    list.addNode('C');
     // console.log(list.toString());
     expect(list.toString()).toEqual('{ A } -> { B } -> { C } -> NULL');
   });
