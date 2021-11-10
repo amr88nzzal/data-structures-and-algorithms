@@ -1,11 +1,7 @@
-'use strict';
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
+const Node = require('./node');
+
 class LinkedList {
+
   constructor() {
     this.head = null;
   }
@@ -42,7 +38,7 @@ class LinkedList {
     string += `NULL`;
     return string;
   }
-  addNode(value) {
+  append(value) {
     let newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
@@ -55,6 +51,38 @@ class LinkedList {
     scoopNode.next = newNode;
     return this;
   }
+  insertBefore(value, newValue) {
+    let newNode = new Node(newValue);
+    let curNode = this.head;
+    let leftList;
+    let rightList;
+    while ((curNode) && curNode.value !== value) {
+      leftList = curNode;
+      curNode = curNode.next;
+    }
+    if (curNode) {
+      rightList = curNode;
+      newNode.next = rightList;
+      if (leftList) { leftList.next = newNode ;}
+      else { this.head = newNode; }
+    }
+  }
+  insertAfter(value, newValue) {
+    let newNode = new Node(newValue);
+    let curNode = this.head;
+    let leftList;
+    let rightList;
+    while ((curNode) && curNode.value !== value) {
+      curNode = curNode.next;
+    }
+    if (curNode) {
+      leftList = curNode;
+      rightList = curNode.next;
+      newNode.next = rightList;
+      leftList.next = newNode;
+    }
+  }
+
 }
 
 module.exports = LinkedList;

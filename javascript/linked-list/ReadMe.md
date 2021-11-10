@@ -20,7 +20,7 @@ Linked List can be defined as collection of objects called nodes that are random
 
 * `insert` method: space O(1) and time O(1) : it takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance (if the list is empty).
 
-* `insert` method: space O(n) and time O(n) : it takes any value as an argument and adds a new node with the given value to the end of the list.
+* `addNode` method: space O(n) and time O(n) : it takes any value as an argument and adds a new node with the given value to the end of the list.
 
 * `includes` method: space O(n) and time O(n) : it takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
