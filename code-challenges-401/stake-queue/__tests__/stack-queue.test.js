@@ -68,7 +68,6 @@ describe('Queue testing', () => {
     queue.dequeue();
     queue.dequeue();
     queue.dequeue();
-    
     expect(queue.length).toEqual(0);
     expect(queue.isEmpty()).toBe(true);
   });
@@ -80,15 +79,4 @@ describe('Queue testing', () => {
     expect(newQueue.dequeue()).toBe('The Queue is Empty');
   });
 });
-
-// queue.enqueue(2);
-// queue.enqueue(3);
-// console.log(queue);
-// queue.dequeue();
-// queue.dequeue();
-// console.log(queue);
-// console.log(queue.peek());
-// console.log(queue.isEmpty());
-
-
 
