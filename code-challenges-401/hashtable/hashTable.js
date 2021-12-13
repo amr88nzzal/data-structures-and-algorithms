@@ -23,13 +23,20 @@ class HashMap {
   //------
   get(key) {
     const hash = this.genHash(key);
-    return this.map[hash].values();
+    let result = {};
+    if (this.map[hash]) {
+      const allValues = this.map[hash].values();
+      allValues.map((item) => {
+        const itemKey = Object.keys(item);
+        if (itemKey[0] === key) {
+          result = item;
+        }
+      });
+    }
+    return result;
   }
-  contains(key){
-    const hash = this.genHash(key);
-    if(this.map[hash])
-    {return true;}
-    else{return false;}
+  contains(key) {
+    if (this.get(key)[key]) { return true; } else { return false; }
   }
 }
 module.exports = HashMap;
