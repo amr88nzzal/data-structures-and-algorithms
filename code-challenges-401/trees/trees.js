@@ -70,9 +70,6 @@ class BinarySearchTree extends BinaryTree {
           node.left = new Node(value);
         }
       }
-
-
-
       if (value > node.value) {
         if (node.right) {
           _binCheck(node.right);
@@ -89,6 +86,10 @@ class BinarySearchTree extends BinaryTree {
 
     return treeValues.includes(value);
   }
+  max(){
+    let maxNode=this.inOrder();
+    return(maxNode.reduce((a,b) =>{return Math.max(a,b);},0));
+  }
 }
 
 
@@ -99,10 +100,17 @@ bt.add(4);
 bt.add(3);
 bt.add(1);
 bt.add(6);
+bt.add(51);
+bt.add(21);
+bt.add(41);
+bt.add(31);
+bt.add(11);
+bt.add(61);
 console.log(bt.contains(5));
 console.log(bt.contains(10));
 console.log(bt.preOrder());
 console.log(bt.inOrder());
 console.log(bt.postOrder());
+console.log(bt.max());
  
 module.exports = BinarySearchTree;
