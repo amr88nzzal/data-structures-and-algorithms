@@ -86,31 +86,49 @@ class BinarySearchTree extends BinaryTree {
 
     return treeValues.includes(value);
   }
-  max(){
-    let maxNode=this.inOrder();
-    return(maxNode.reduce((a,b) =>{return Math.max(a,b);},0));
+  max() {
+    let maxNode = this.inOrder();
+    return (maxNode.reduce((a, b) => { return Math.max(a, b); }, 0));
   }
+  breadth() {
+    let result = [];
+    let roots = [];
+    if (this.root === null) {
+      return ('Empty Tree!');
+    }
+    else {
+      roots.push(this.root);
+      while (roots.length) {
+        const node = roots.shift();
+        if (node.left) {
+          roots.push(node.left);
+        }
+        if (node.right) {
+          roots.push(node.right);
+        }
+        result.push(node.value);
+      }
+    }
+    return result;
+  }
+
 }
 
 
 const bt = new BinarySearchTree();
-bt.add(5);
-bt.add(2);
-bt.add(4);
-bt.add(3);
-bt.add(1);
 bt.add(6);
-bt.add(51);
-bt.add(21);
-bt.add(41);
-bt.add(31);
-bt.add(11);
-bt.add(61);
+bt.add(1);
+bt.add(2);
+bt.add(3);
+bt.add(5);
+bt.add(4);
+
 console.log(bt.contains(5));
 console.log(bt.contains(10));
 console.log(bt.preOrder());
 console.log(bt.inOrder());
 console.log(bt.postOrder());
 console.log(bt.max());
- 
+console.log(bt.breadth());
+
 module.exports = BinarySearchTree;
