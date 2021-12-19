@@ -1,0 +1,15 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "* A non-linear data structure that can be looked at as a collection of vertices (or nodes) potentially connected by line segments named edges. *  it's a non liner DS , consist of vertex hold the values and these vertex maybe connected to each other by edges , in some type of  Graph called weight graph these edge hold weight * graph  common to be directional or unidirectional     * directional : if the edge has arrow pointer of the specific direction     * unidirectional : mean we can pass in bidirectional",
+  "main": "graph.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.5"
+  }
+}
