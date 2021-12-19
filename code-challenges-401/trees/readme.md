@@ -58,3 +58,16 @@
 - Time :
 add - O(n)
 contains - O(h); h:the hight of tree.
+
+***
+# Code Challenge 16
+
+## WhiteBoard
+![15](./wb16.png)
+
+
+## Test 
+
+![test](./test16.png)
+<br/>
+<br/>

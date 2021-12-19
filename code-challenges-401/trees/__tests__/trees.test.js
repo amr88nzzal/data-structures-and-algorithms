@@ -38,4 +38,7 @@ describe('testing tree methods', () => {
     expect(tree.contains(8)).toEqual(false);
     expect(tree.contains(9)).toEqual(true);
   });
+  it('7)- Can successfully determine the max value is in a Tree', () => {
+    expect(tree.max()).toEqual(9);
+  });
 });
