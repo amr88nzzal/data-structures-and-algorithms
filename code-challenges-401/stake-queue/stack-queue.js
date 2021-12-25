@@ -67,30 +67,30 @@ class Queue {
     this.length++;
     return this.rear.value;
   }
-  dequeue(){
-    if(this.length === 0){
+  dequeue() {
+    if (this.length === 0) {
       return ('The Queue is Empty');
-    }else{
+    } else {
       let frontNode = this.front.value;
-      let temp= this.front.next;
-      this.front=temp;
-      temp=null;
+      let temp = this.front.next;
+      this.front = temp;
+      temp = null;
       this.length--;
       return frontNode;
     }
   }
-  peek(){
-    if(this.length===0){
+  peek() {
+    if (this.length === 0) {
       return null;
-    }else{
+    } else {
       return this.front.value;
     }
   }
-  isEmpty(){
-    return this.length===0;
+  isEmpty() {
+    return this.length === 0;
   }
 }
 
 
 
-module.exports = { Stack,Queue };
+module.exports = { Stack, Queue };

@@ -83,3 +83,15 @@ contains - O(h); h:the hight of tree.
 ![test](./test17.png)
 <br/>
 <br/>
+
+# Code Challenge 18
+
+## WhiteBoard
+![17](./wb18.jpg)
+
+
+## Test 
+
+![test](./test18.png)
+<br/>
+<br/>
