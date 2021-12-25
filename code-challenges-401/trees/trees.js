@@ -93,6 +93,7 @@ class BinarySearchTree extends BinaryTree {
   breadth() {
     let result = [];
     let roots = [];
+    console.log('--***************-',this.root);
     if (this.root === null) {
       return ('Empty Tree!');
     }
