@@ -1,0 +1,15 @@
+{
+  "name": "merge-sort",
+  "version": "1.0.0",
+  "description": "## Introduction --- **Merge Sort is a sorting algorithm that splits up the values of an array and then merges them in a sorted order. It is a very efficient sorting algorithm - O(n log n).** ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.5"
+  }
+}
