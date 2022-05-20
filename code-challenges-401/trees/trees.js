@@ -132,4 +132,4 @@ console.log(bt.postOrder());
 console.log(bt.max());
 console.log(bt.breadth());
 
-module.exports = BinarySearchTree;
+module.exports = {BinarySearchTree,BinaryTree,Node};
